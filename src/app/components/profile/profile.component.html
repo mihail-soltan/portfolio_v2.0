@@ -1,0 +1,17 @@
+<div class="profile">
+    <h1>{{quote}}</h1>
+    <div>
+        <!-- <img src="#" alt="me"> -->
+        <div>
+            <input (click)="checkTab($event)" type="radio" name="skillTab" id="frontend" checked>
+            <label for="frontend">Frontend Skills</label>
+            <input type="radio" name="skillTab" id="backend">
+            <label for="backend">Frontend Skills</label>
+
+        </div>
+        <button (click)="changeSkillTab('frontend-skills')" class="skillTab tab1">Front-End</button>
+        <button (click)="changeSkillTab('backend-skills')" class="skillTab tab2">Back-End</button>
+        <app-frontend-skills *ngIf="skillTab==='frontend-skills'"></app-frontend-skills>
+        <app-backend-skills *ngIf="skillTab==='backend-skills'"></app-backend-skills>
+    </div>
+</div>
