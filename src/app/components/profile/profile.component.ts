@@ -15,12 +15,12 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
   }
   tabChecked = new EventEmitter();
-  changeSkillTab(t: string){
-    this.skillTab = t;
+  changeSkillTab(t: any){
+    this.skillTab = t.target.id;
     console.log(this.skillTab)
   }
 
   checkTab (t: any){
-
+    console.log(t.target)
   }
 }
