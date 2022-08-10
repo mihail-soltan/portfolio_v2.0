@@ -1,10 +1,9 @@
 <div class="flex flex-col justify-start items-center text-center min-h-screen">
   <h1>{{ quote }}</h1>
   <!-- <img src="#" alt="me"> -->
-  <div class="hidden md:flex flex-row justify-center items-stretch min-w-full md:bg-slate-100">
-    <div class="p-2 border-red-700">
+  <div class="hidden md:flex flex-row justify-center items-stretch min-w-full">
+    <div class="p-2">
       <input
-        (click)="checkTab($event)"
         type="radio"
         class="hidden peer"
         name="skillTab"
@@ -12,17 +11,17 @@
         checked
         (change)="changeSkillTab($event)"
       />
-      <label for="frontend-skills">Frontend Skills</label>
+      <label class="p-2 mx-1 border border-gray-200 cursor-pointer text-emerald-500 peer-checked:text-fuchsia-600" for="frontend-skills">Frontend Skills</label>
     </div>
-    <div class="p-2 border-red-700">
+    <div class="p-2">
       <input
         type="radio"
-        class="border-gray-300 p-2"
+        class="hidden peer"
         name="skillTab"
         id="backend-skills"
         (change)="changeSkillTab($event)"
       />
-      <label for="backend-skills">Backend Skills</label>
+      <label class="p-2 mx-1 border border-gray-200 cursor-pointer text-emerald-500 peer-checked:text-fuchsia-600" for="backend-skills">Backend Skills</label>
     </div>
   </div>
   <app-frontend-skills
